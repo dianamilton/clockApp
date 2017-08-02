@@ -1,0 +1,35 @@
+# do not touch this line
+configVersion: 2
+
+description: Tells time using Date object with LEDs
+keywords: 'LED, Time'
+name: clockApp
+displayName: Clock App
+
+
+screens:
+  - - chosen
+  - - alarm
+  - - tod
+
+widgets:
+  chosen:
+    display: label
+    type: time
+    label: Chosen Alarm Time
+  alarm:
+    control: input
+    map:
+      - event: hours
+        value: 'wake up hour'
+      - event: minutes
+        value: 'wake up minute'
+    label: Wake Up Time
+  tod:
+    control: dropdown
+    map:
+        - event: AM
+          value: AM
+        - event: PM
+          value: PM
+      label: Time of Day 
